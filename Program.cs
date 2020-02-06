@@ -6,31 +6,43 @@ namespace Deliverable3_Methods
     {
         static void Main(string[] args)
         {
-            // try catch to prevent coding erros
-            try
-            {
-                // Ask for user input
+            
+          
+            
+                 // Ask for user to input his/her name
                 Console.WriteLine("Please enter your name:");
-                string userName = HelloName();
+                string Username;
 
-                // Show message to user input
-                Console.WriteLine("Hello " + userName + "!");
 
-            }
+            Name();
 
-            catch
-            {   //If error in the code, the follow message will appear:
-                Console.WriteLine("An error was present in the code. Please try again. ");
-            }
+                void Name()            
+                {
+
+                   string Username = Console.ReadLine(); // collect user input
+                    if (System.Text.RegularExpressions.Regex.IsMatch(Username, "[a-zA-Z]" + " " + "[a-zA-Z]+$")) // test if user entered string or not
+                    {
+                        // display message to user
+                        Console.WriteLine("Hello" + " " + Username + "!");
+                        Console.WriteLine("Thank you for giving an acceptable input.");
+                    }
+                    else if (System.Text.RegularExpressions.Regex.IsMatch(Username, @"^[a-zA-Z]+$"))
+                    {
+                        // display message to user
+                        Console.WriteLine("Hello" + " " + Username + "!");
+                        Console.WriteLine("Thank you for giving an acceptable input.");
+                    }
+                    else
+                    {
+                        // display error message to user
+                        Console.WriteLine("Please only enter alphabetical letters.");
+                        Console.WriteLine("Please enter your name and try again.");
+                    }
+                }
+           
+
+            
         }
 
-
-        private static string HelloName()
-        {
-            string UserName = Console.ReadLine();
-            return UserName;
-        }
-        }
-
-    } // End of Max_Heart_Rate
-    
+    }
+}
