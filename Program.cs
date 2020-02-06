@@ -24,13 +24,13 @@ namespace Deliverable3_Methods
                     {
                         // display message to user
                         Console.WriteLine("Hello" + " " + Username + "!");
-                        Console.WriteLine("Thank you for giving an acceptable input.");
+                        
                     }
                     else if (System.Text.RegularExpressions.Regex.IsMatch(Username, @"^[a-zA-Z]+$"))
                     {
                         // display message to user
                         Console.WriteLine("Hello" + " " + Username + "!");
-                        Console.WriteLine("Thank you for giving an acceptable input.");
+                        
                     }
                     else
                     {
