@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+    Author: Vitor Crosera
+    Date: 02/07/2020
+    Comments: This C# Console application code demonstrates the use of
+              methods after getting input from a user.
+*/
+using System;
 
 namespace Deliverable3_Methods
 {
